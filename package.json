@@ -1,0 +1,36 @@
+{
+  "name": "gulp-json2cson",
+  "version": "1.0.0",
+  "description": "Gulp plugin to convert JSON to CSON.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gluons/gulp-json2cson.git"
+  },
+  "keywords": [
+    "gulp",
+    "gulpplugin",
+    "gulp-plugin",
+    "json",
+    "cson"
+  ],
+  "author": {
+    "name": "Gluons",
+    "email": "sarunta@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gluons/gulp-json2cson/issues"
+  },
+  "homepage": "https://github.com/gluons/gulp-json2cson#readme",
+  "dependencies": {
+    "coffee-script": "^1.10.0",
+    "cson": "^3.0.2",
+    "gulp-util": "^3.0.7",
+    "through2": "^2.0.1"
+  },
+  "devDependencies": {}
+}
