@@ -6,7 +6,7 @@ PluginError = gutil.PluginError
 
 PLUGIN_NAME = 'gulp-json2cson'
 
-module.exports = (replacer = null, indent = '  ') ->
+module.exports = (indent = '  ') ->
   through.obj (file, encoding, callback) ->
     if file.isNull()
       callback null, file
@@ -14,10 +14,12 @@ module.exports = (replacer = null, indent = '  ') ->
     if file.isStream()
       callback new PluginError(PLUGIN_NAME, 'Streams not supported!')
 
-    json = JSON.parse file.contents.toString()
-    file.contents = new Buffer CSON.stringify json, replacer, indent
-    file.path = gutil.replaceExtension file.path, '.cson'
+    try
+      json = JSON.parse file.contents.toString()
+      file.contents = new Buffer CSON.stringify json, null, indent
+      file.path = gutil.replaceExtension file.path, '.cson'
 
-    callback null, file
-
+      callback null, file
+    catch error
+      callback new PluginError(PLUGIN_NAME, error)
     return
