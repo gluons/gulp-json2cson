@@ -27,17 +27,12 @@
   },
   "homepage": "https://github.com/gluons/gulp-json2cson#readme",
   "dependencies": {
-    "coffee-script": "^1.10.0",
-    "cson": "^3.0.2",
+    "coffee-script": "^1.11.1",
+    "cson": "^4.0.0",
     "gulp-util": "^3.0.7",
     "through2": "^2.0.1"
   },
   "devDependencies": {
-    "mocha": "^2.4.5"
-  },
-  "coffeelintConfig": {
-    "max_line_length": {
-      "level": "ignore"
-    }
+    "mocha": "*"
   }
 }

@@ -16,7 +16,7 @@ module.exports = (indent = '  ') ->
 
     try
       json = JSON.parse file.contents.toString()
-      file.contents = new Buffer CSON.stringify json, null, indent
+      file.contents = Buffer.from CSON.stringify json, null, indent
       file.path = gutil.replaceExtension file.path, '.cson'
 
       callback null, file

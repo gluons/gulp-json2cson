@@ -58,7 +58,6 @@ describe 'JSON to CSON', () ->
     myParser.once 'error', (err) ->
       assert.notEqual err, null
       assert.equal err.name, 'SyntaxError'
-      assert.equal err.message, 'Unexpected token :'
       done()
       return
 
