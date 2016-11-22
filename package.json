@@ -1,6 +1,6 @@
 {
   "name": "gulp-json2cson",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Gulp plugin to parse JSON to CSON.",
   "main": "index.js",
   "scripts": {
@@ -22,7 +22,7 @@
   "bugs": {
     "url": "https://github.com/gluons/gulp-json2cson/issues"
   },
-  "homepage": "https://github.com/gluons/gulp-json2cson#readme",
+  "homepage": "https://github.com/gluons/gulp-json2cson",
   "dependencies": {
     "coffee-script": "^1.11.1",
     "cson": "^4.0.0",
