@@ -17,10 +17,7 @@
     "json",
     "cson"
   ],
-  "author": {
-    "name": "Gluons",
-    "email": "sarunta@gmail.com"
-  },
+  "author": "Saran Tanpituckpong <sarunta@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/gluons/gulp-json2cson/issues"

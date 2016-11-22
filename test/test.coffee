@@ -19,7 +19,7 @@ describe 'JSON to CSON', () ->
 
     myParser.once 'data', (file) ->
       assert.notEqual file.contents, null
-      assert.equal file.contents.toString(), fs.readFileSync('test/expected/success.cson').toString()
+      assert.equal file.contents.toString(), fs.readFileSync('test/expected/success.cson').toString().replace(/\r\n/g, '\n') # Fixed Windows newline issue.
       done()
       return
 
@@ -38,7 +38,7 @@ describe 'JSON to CSON', () ->
 
     myParser.once 'data', (file) ->
       assert.notEqual file.contents, null
-      assert.equal file.contents.toString(), fs.readFileSync('test/expected/success-tab.cson').toString()
+      assert.equal file.contents.toString(), fs.readFileSync('test/expected/success-tab.cson').toString().replace(/\r\n/g, '\n') # Fixed Windows newline issue.
       done()
       return
 
