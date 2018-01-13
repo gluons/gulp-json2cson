@@ -15,7 +15,7 @@ task 'build', 'Build all source files', () ->
   invoke 'clean' # Clean before build
 
   makeDir.sync('dist')
-  files = await globby 'src/*.coffee'
+  files = globby.sync 'src/*.coffee'
   files.forEach (file) ->
     baseFile = basename file
     resultFile = join('dist', replaceExt(baseFile, '.js'))
