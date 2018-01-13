@@ -22,7 +22,8 @@ task 'build', 'Build all source files', () ->
     sourceMapFile = join('dist', replaceExt(baseFile, '.js.map'))
     result = CoffeeScript.compile(fs.readFileSync(file, 'utf8'), {
       sourceMap: true,
-      bare: true
+      bare: true,
+      transpile: JSON.parse(fs.readFileSync('.babelrc', 'utf8'))
     })
     fs.writeFileSync resultFile, result.js
     fs.writeFileSync sourceMapFile, result.v3SourceMap
