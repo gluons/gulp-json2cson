@@ -34,8 +34,9 @@
   "homepage": "https://github.com/gluons/gulp-json2cson",
   "dependencies": {
     "cson": "^4.1.0",
-    "gulp-util": "^3.0.8",
-    "through2": "^2.0.3"
+    "plugin-error": "^0.1.2",
+    "through2": "^2.0.3",
+    "vinyl": "^2.1.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",

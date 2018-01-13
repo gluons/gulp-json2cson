@@ -1,8 +1,7 @@
 assert = require 'assert'
 fs = require 'fs'
-gutil = require 'gulp-util'
+Vinyl = require 'vinyl'
 
-{ File } = gutil
 { readFileSync } = fs
 
 json2cson = require '../dist/main.js'
@@ -13,7 +12,7 @@ describe 'JSON to CSON', () ->
   it 'should parse JSON to CSON', (done) ->
     myParser = json2cson()
 
-    fakeFile = new File {
+    fakeFile = new Vinyl {
       cwd: '.'
       base: 'test/source'
       path: 'test/source/success.json'
@@ -35,7 +34,7 @@ describe 'JSON to CSON', () ->
   it 'should parse JSON to CSON with tab indentation', (done) ->
     myParser = json2cson('\t')
 
-    fakeFile = new File {
+    fakeFile = new Vinyl {
       cwd: '.'
       base: 'test/source'
       path: 'test/source/success.json'
@@ -57,7 +56,7 @@ describe 'JSON to CSON', () ->
   it 'should return error when cannot parse file', (done) ->
     myParser = json2cson()
 
-    fakeFile = new File {
+    fakeFile = new Vinyl {
       cwd: '.'
       base: 'test/source'
       path: 'test/source/error.json'
