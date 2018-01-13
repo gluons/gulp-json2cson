@@ -2,9 +2,18 @@
   "name": "gulp-json2cson",
   "version": "1.0.1",
   "description": "Gulp plugin to parse JSON to CSON.",
-  "main": "index.js",
+  "main": "dist/main.js",
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=6"
+  },
   "scripts": {
-    "test": "mocha --compilers coffee:coffee-script/register"
+    "build": "cake build",
+    "lint": "coffeelint Cakefile src/ test/",
+    "pretest": "npm run build",
+    "test": "mocha --require coffeescript/register \"test/*.coffee\""
   },
   "repository": {
     "type": "git",
@@ -24,12 +33,20 @@
   },
   "homepage": "https://github.com/gluons/gulp-json2cson",
   "dependencies": {
-    "coffee-script": "^1.11.1",
-    "cson": "^4.0.0",
-    "gulp-util": "^3.0.7",
-    "through2": "^2.0.1"
+    "cson": "^4.1.0",
+    "gulp-util": "^3.0.8",
+    "through2": "^2.0.3"
   },
   "devDependencies": {
-    "mocha": "*"
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "chalk": "^2.3.0",
+    "coffeelint": "^2.0.7",
+    "coffeescript": "^2.1.1",
+    "del": "^3.0.0",
+    "globby": "^7.1.1",
+    "make-dir": "^1.1.0",
+    "mocha": "*",
+    "replace-ext": "^1.0.0"
   }
 }

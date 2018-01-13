@@ -1,11 +1,28 @@
+﻿
+# Created by https://www.gitignore.io/api/node,linux,windows
 
-# Created by https://www.gitignore.io/api/node,windows
+### Linux ###
+*~
+
+# temporary files which can be created if a process still has a handle open of a deleted file
+.fuse_hidden*
+
+# KDE directory preferences
+.directory
+
+# Linux trash folder which might appear on any partition or disk
+.Trash-*
+
+# .nfs files are created when an open file is removed but is still being accessed
+.nfs*
 
 ### Node ###
 # Logs
 logs
 *.log
 npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
 # Runtime data
 pids
@@ -25,6 +42,9 @@ coverage
 # Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
 .grunt
 
+# Bower dependency directory (https://bower.io/)
+bower_components
+
 # node-waf configuration
 .lock-wscript
 
@@ -32,8 +52,11 @@ coverage
 build/Release
 
 # Dependency directories
-node_modules
-jspm_packages
+node_modules/
+jspm_packages/
+
+# Typescript v1 declaration files
+typings/
 
 # Optional npm cache directory
 .npm
@@ -50,12 +73,15 @@ jspm_packages
 # Yarn Integrity file
 .yarn-integrity
 
+# dotenv environment variables file
+.env
 
 
 ### Windows ###
-# Windows image file caches
+# Windows thumbnail cache files
 Thumbs.db
 ehthumbs.db
+ehthumbs_vista.db
 
 # Folder config file
 Desktop.ini
@@ -72,3 +98,8 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+
+# End of https://www.gitignore.io/api/node,linux,windows
+
+# Dist
+dist/
