@@ -1,8 +1,7 @@
-gutil = require 'gulp-util'
-through = require 'through2'
 CSON = require 'cson'
-
-PluginError = gutil.PluginError
+PluginError = require 'plugin-error'
+replaceExt = require 'replace-ext'
+through = require 'through2'
 
 PLUGIN_NAME = 'gulp-json2cson'
 
@@ -16,7 +15,7 @@ module.exports = (indent = '  ') ->
       try
         json = JSON.parse file.contents.toString()
         file.contents = Buffer.from CSON.stringify json, null, indent
-        file.path = gutil.replaceExtension file.path, '.cson'
+        file.path = replaceExt file.path, '.cson'
 
         callback null, file
       catch error
