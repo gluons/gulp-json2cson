@@ -1,6 +1,6 @@
 {
   "name": "gulp-json2cson",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "Gulp plugin to parse JSON to CSON.",
   "main": "dist/main.js",
   "files": [
