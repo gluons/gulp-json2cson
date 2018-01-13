@@ -4,10 +4,12 @@ root = true
 indent_style = tab
 indent_size = 4
 charset = utf-8
+insert_final_newline = true
+trim_trailing_whitespace = true
 
 [*.md]
 trim_trailing_whitespace = false
 
-[{*.{coffee,cson,yml,yaml,jade,pug},{package,bower}.json}]
+[{*.{coffee,cson,yml,yaml,jade,pug,rb,gemspec},{package,bower}.json,Cakefile,Rakefile,Gemfile}]
 indent_style = space
 indent_size = 2
